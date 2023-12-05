@@ -8,7 +8,7 @@ export default function Home() {
   return (
    <main >
 
-    <section className={'w-display'} > <Carousel/> </section>
+    <section > <Carousel/> </section>
    </main>
   )
 }
