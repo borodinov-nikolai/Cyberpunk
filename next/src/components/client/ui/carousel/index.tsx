@@ -40,7 +40,7 @@ const Carousel = () => {
         }) }
         </Swiper>
 
-        <div id='desktop_carousel_block' className={`hidden w-[32%] h-[37%] absolute z-10 right-[17%] bottom-0 lg:block bg-[url("/images/desktop_carousel_block.png")] 
+        <div id='desktop_carousel_text' className={`hidden w-[32%] h-[37%] absolute z-10 right-[17%] bottom-0 lg:block bg-[url("/images/desktop_carousel_block.png")] 
        bg-no-repeat bg-cover p-[4%]`} >
          <div className={"text-[2.5vw] leading-[2.5vw]"} >Доступно на всех платформах</div>
          <div className={'h-[40%] w-[50%] mt-[5%] font-bold'} ><Button color='black'>Узнать больше</Button></div>
