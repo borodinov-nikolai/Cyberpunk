@@ -2,13 +2,13 @@ import React from "react";
 import styles from "./Header.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/assets/icons/Cyberpunk_2077_logo 1.svg";
-import youtube_icon from "@/assets/icons/youtube logo.svg";
-import vk_icon from "@/assets/icons/vk logo.svg";
-import facebook_icon from "@/assets/icons/facebook-rect logo.png";
-import twiter_icon from "@/assets/icons//twitter-square logo.svg";
-import twitch_icon from "@/assets/icons/twitch logo.svg";
-import instagram_icon from "@/assets/icons/instagram-square logo.svg";
+import logo from "@/public/icons/Cyberpunk_2077_logo 1.svg";
+import youtube_icon from "@/public/icons/youtube logo.svg";
+import vk_icon from "@/public/icons/vk logo.svg";
+import facebook_icon from "@/public/icons/facebook-rect logo.png";
+import twiter_icon from "@/public/icons//twitter-square logo.svg";
+import twitch_icon from "@/public/icons/twitch logo.svg";
+import instagram_icon from "@/public/icons/instagram-square logo.svg";
 
 const socialList: { id: number; name: string; icon: string }[] = [
   {
@@ -47,7 +47,7 @@ const Header = () => {
   return (
     <div
       className={
-        "z-[2] xl :container w-full flex flex-col items-center  mx-auto h-[74px] absolute top-[20px] left-1/2 -translate-x-1/2  sm:flex-row sm:justify-between md:px-[36px]"
+        "z-[2] xl:container w-full flex flex-col items-center  mx-auto h-[74px] absolute top-[20px] left-1/2 -translate-x-1/2  sm:flex-row sm:justify-between md:px-[36px]"
       }
     >
       <Link className={"inline-block"} href={"/"}>
