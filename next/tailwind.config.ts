@@ -13,18 +13,10 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      keyframes: {
-        shift: {
-          '0': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-200%)' },
-         
-        }
-
+      fontFamily: {
+        roboto: ['var(--font-roboto)'],
+        archangelsk: ['var(--font-archangelsk)'],
       },
-      animation: {
-        carousel: 'shift 2s linear 2'
-      }
-      
         
       
     },

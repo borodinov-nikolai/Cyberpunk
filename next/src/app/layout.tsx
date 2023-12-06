@@ -1,10 +1,22 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import {Roboto} from 'next/font/google'
+import localFont from 'next/font/local'
 import '../styles/styles.scss'
-import Header from '@/src/components/server/layout/header'
+import Header from '@/src/components/server/layouts/header'
 
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+  variable: '--font-roboto'
+})
+
+const archangelsk = localFont({
+  src: '../../public/fonts/Archangelsk.woff',
+  display: 'swap',
+  variable: '--font-archangelsk'
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body id='__next' className={inter.className}>
+      <body id='__next' className={[archangelsk.variable, roboto.variable].join(' ')}>
         <Header/>
         {children}
         </body>
