@@ -7,9 +7,8 @@ import Button from '@/src/components/client/ui/button';
 // Import Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade} from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+
+
 
 
 const Carousel = () => {
