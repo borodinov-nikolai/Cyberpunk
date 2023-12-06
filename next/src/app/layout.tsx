@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import {Roboto} from 'next/font/google'
 import localFont from 'next/font/local'
-import '../styles/styles.scss'
+import '@/src/styles/styles.scss'
 import Header from '@/src/components/server/layouts/header'
 
 

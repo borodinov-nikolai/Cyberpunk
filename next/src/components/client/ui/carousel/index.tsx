@@ -49,7 +49,7 @@ const Carousel = () => {
 
 
 
-      <div id="tablet_carousel" className={'hidden sm:block lg:hidden relative'} >
+      <div id="tablet_carousel" className={'hidden sm:max-lg:block relative'} >
         <Swiper
          spaceBetween={0}
          allowTouchMove={false}
