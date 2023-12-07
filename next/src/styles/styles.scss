@@ -1,10 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import '../../node_modules/aos/dist/aos.css';
-@import '../../node_modules/swiper/swiper.css';
-
+@import "../../node_modules/aos/dist/aos.css";
+@import "../../node_modules/swiper/swiper.css";
 
 body {
-    min-height: 200vh;
+  min-height: 200vh;
 }

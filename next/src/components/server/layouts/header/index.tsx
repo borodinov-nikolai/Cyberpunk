@@ -4,13 +4,11 @@ import Image from "next/image";
 import logo from "@/public/icons/Cyberpunk_2077_logo 1.svg";
 import socialList from "@/src/constants/social_list_items";
 
-
-
 const Header = () => {
   return (
     <div
       className={
-        "z-[2] xl:container w-full flex flex-col gap-5 sm:gap-0 items-center  mx-auto h-[74px] absolute top-[20px] left-1/2 -translate-x-1/2  sm:flex-row sm:justify-between md:px-[36px]"
+        "absolute left-1/2 top-[20px] z-[2] mx-auto flex h-[74px] w-full  -translate-x-1/2 flex-col items-center gap-5 xl:container sm:flex-row  sm:justify-between sm:gap-0 md:px-[36px]"
       }
     >
       <Link className={"inline-block"} href={"/"}>
@@ -24,7 +22,7 @@ const Header = () => {
         />{" "}
       </Link>
 
-      <ul className={"flex h-full gap-10 sm:gap-4 lg:gap-10 items-center"}>
+      <ul className={"flex h-full items-center gap-10 sm:gap-4 lg:gap-10"}>
         {socialList.map(({ id, name, icon }) => {
           return (
             <li key={id}>

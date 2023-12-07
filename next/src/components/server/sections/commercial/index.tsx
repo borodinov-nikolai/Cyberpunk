@@ -1,13 +1,7 @@
-import React from 'react'
-
-
+import React from "react";
 
 const Commercial = () => {
-  return (
-    <div></div>
-  )
-}
+  return <div></div>;
+};
 
-
-
-export default Commercial
+export default Commercial;
