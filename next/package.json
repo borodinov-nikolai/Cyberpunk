@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write src/**/* .prettierrc",
-    "minifycss": "tailwindcss -o build.css --minify"
+    "cssbuild": "tailwindcss -o build.css --minify"
   },
   "dependencies": {
     "@fontsource/roboto": "^5.0.8",

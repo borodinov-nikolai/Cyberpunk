@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import mobile_screenshot_1 from "@/public/images/mobile_screenshot_1.jpg";
 import mobile_screenshot_2 from "@/public/images/mobile_screenshot_2.jpg";
 import mobile_screenshot_3 from "@/public/images/mobile_screenshot_3.jpg";

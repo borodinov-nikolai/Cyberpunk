@@ -50,7 +50,7 @@ const Carousel = () => {
 
         <div
           id="desktop_carousel_block"
-          className={`absolute bottom-0 right-[17%] z-10 h-[37%] w-[32%] bg-[url("/images/desktop_carousel_block.png")] 
+          className={`absolute bottom-0 right-[17%] z-10 h-[37%] w-[32%] bg-[url(/images/desktop_carousel_block.png)] 
        bg-cover bg-no-repeat p-[4%]`}
         >
           <div
@@ -102,7 +102,7 @@ const Carousel = () => {
 
         <div
           id="tablet_carousel_block"
-          className={`absolute bottom-0 right-[4%] z-10 h-[37%] w-[60%] bg-[url("/images/desktop_carousel_block.png")] 
+          className={`absolute bottom-0 right-[4%] z-10 h-[37%] w-[60%] bg-[url(/images/desktop_carousel_block.png)] 
        bg-cover bg-no-repeat p-[6%]`}
         >
           <div
@@ -155,7 +155,7 @@ const Carousel = () => {
         </Swiper>
         <div
           id="mobile_carousel_block"
-          className={`absolute bottom-0 z-10 h-[29%] w-screen bg-[url("/images/mobile_carousel_block.png")] 
+          className={`absolute bottom-0 z-10 h-[29%] w-screen bg-[url(/images/mobile_carousel_block.png)] 
        bg-cover bg-no-repeat p-[10%]`}
         >
           <div

@@ -6,7 +6,7 @@ import socialList from "@/src/constants/social_list_items";
 
 const Header = () => {
   return (
-    <div
+    <header
       className={
         "absolute left-1/2 top-[20px] z-[2] mx-auto flex h-[74px] w-full  -translate-x-1/2 flex-col items-center gap-5 xl:container sm:flex-row  sm:justify-between sm:gap-0 md:px-[36px]"
       }
@@ -22,19 +22,27 @@ const Header = () => {
         />{" "}
       </Link>
 
-      <ul className={"flex h-full items-center gap-10 sm:gap-4 lg:gap-10"}>
+      <ul
+        className={"flex h-full items-center gap-[30px] p-3 sm:gap-8 lg:gap-10"}
+      >
         {socialList.map(({ id, name, icon }) => {
           return (
             <li key={id}>
               {" "}
               <Link href="/">
-                <Image src={icon} height={30} width={30} alt={name} />{" "}
+                <Image
+                  className={"h-[30px] w-auto"}
+                  src={icon}
+                  height={30}
+                  width={30}
+                  alt={name}
+                />{" "}
               </Link>{" "}
             </li>
           );
         })}
       </ul>
-    </div>
+    </header>
   );
 };
 
