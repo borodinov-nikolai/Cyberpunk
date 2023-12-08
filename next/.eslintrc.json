@@ -1,8 +1,4 @@
 {
-  "extends": "next/core-web-vitals",
-  
-    "rules": {
-      "object-curly-spacing": ["error", "never"]
-    }
+  "extends": "next/core-web-vitals"
   
 }
