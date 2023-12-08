@@ -71,13 +71,13 @@ const Draw = () => {
               }
             >
               Играй в
-              <span className={"font-bold text-[#52BEDC]"}>Cyberpunk 2077</span>{" "}
-              и получи возможность выиграть консоль{" "}
-              <span className={"font-bold text-[#52BEDC]"}>Xbox Series X</span>{" "}
-              или{" "}
+              <span className={"font-bold text-[#52BEDC]"}>Cyberpunk 2077</span>
+              и получи возможность выиграть консоль
+              <span className={"font-bold text-[#52BEDC]"}>Xbox Series X</span>
+              или
               <span className={"font-bold text-[#52BEDC]"}>
                 Sony PlayStation 5!
-              </span>{" "}
+              </span>
               Заполни форму ниже и приложи скриншот о покупке игры. Итоги
               розыгрыша будут подведены 1 февраля. Удачи! ;&#41;
             </p>
@@ -100,27 +100,28 @@ const Draw = () => {
               type="text"
               placeholder="Твой email"
             />
-            <div className=" mt-[35px] flex h-[120px] items-center justify-center bg-[url(/images/screenshot_input_border.png)] bg-[length:100%_100%] bg-no-repeat font-light underline sm:placeholder:text-[18px]">
+            <div id='input_file' className=" lg:flex lg:flex-col mt-[35px] flex h-[120px] items-center justify-center bg-[url(/images/screenshot_input_border.png)] bg-[length:100%_100%] bg-no-repeat font-light sm:placeholder:text-[18px]">
               <input
                 className={"hidden"}
                 id="fileInput"
                 type="file"
                 placeholder="Прикрепить скриншот"
-              />{" "}
-              <label className={" cursor-pointer"} htmlFor="fileInput">
-                {" "}
-                Прикрепите скриншот{" "}
+              />
+              <label className={"underline  cursor-pointer"} htmlFor="fileInput">
+                
+                Прикрепите скриншот
               </label>
+              <p className={'text-xs'} >.png / .jpg / .pdf</p>
             </div>
             <div
               className={
-                " mt-[35px] h-[60px] w-[60%] font-bold sm:text-[18px] lg:w-[45%] "
+                " mt-[35px] h-[60px] w-[182px] sm:w-[192px] font-bold sm:text-[18px] "
               }
             >
               <Button color="yellow">Отправить</Button>
             </div>
             <div className={"mt-[14px] flex"}>
-              {" "}
+              
               <input
                 className={"peer hidden"}
                 id="checkbox"
@@ -141,7 +142,7 @@ const Draw = () => {
       </div>
       <div
         id="draw_bottom_corner"
-        className={'w-scren h-[70px] rotate-180 bg-[url("/images/corner.png")]'}
+        className={'w-scren h-[70px] bg-[url("/images/bottom_corner.png")]'}
       ></div>
     </>
   );
