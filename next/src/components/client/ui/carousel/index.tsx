@@ -11,12 +11,11 @@ import { Autoplay, EffectFade } from "swiper/modules";
 const Carousel = () => {
   return (
     <div>
-      <div
-        id="desktop_carousel"
-        className={
-          "relative hidden w-screen justify-center overflow-hidden lg:flex "
-        }
-      >
+    
+
+     
+
+      <div id="mobile_carousel" className={"relative sm:hidden"}>
         <Swiper
           spaceBetween={0}
           allowTouchMove={false}
@@ -33,13 +32,13 @@ const Carousel = () => {
           navigation={false}
           modules={[Autoplay, EffectFade]}
         >
-          {carousel_items.desktop.map(({ id, name, image, priority }) => {
+          {carousel_items.mobile.map(({ id, name, image, priority }) => {
             return (
-              <SwiperSlide key={id} className={"overflow-hidden"}>
+              <SwiperSlide key={id}>
                 <Image
-                quality={60}
+                  quality={70}
                   priority={priority ? true : undefined}
-                  className={"h-auto w-full"}
+                  className={"h-auto w-screen"}
                   src={image}
                   height={1000}
                   width={1920}
@@ -49,27 +48,29 @@ const Carousel = () => {
             );
           })}
         </Swiper>
-
         <div
-          id="desktop_carousel_block"
-          className={`absolute bottom-0 right-[17%] z-10 h-[37%] w-[32%] bg-[url(/images/desktop_carousel_block.png)] 
-       bg-cover bg-no-repeat p-[4%]`}
+          id="mobile_carousel_block"
+          className={`absolute bottom-0 z-10 h-[29%] w-screen bg-[url(/images/mobile_carousel_block.png)] 
+       bg-cover bg-no-repeat p-[10%]`}
         >
           <div
-            id="desktop_carousel_text"
-            className={"font-archangelsk text-[3vw] leading-[3.1vw]"}
+            id="mobile_carousel_text"
+            className={
+              "text-center font-archangelsk text-[9vw] leading-[9.1vw]"
+            }
           >
             Доступно на всех платформах
           </div>
           <div
-            id="desktop_carousel_button"
-            className={"mt-[5%] h-[40%] w-[55%] font-roboto font-bold"}
+            id="mobile_carousel_button"
+            className={
+              "mt-[12%] h-[40%] w-full font-roboto text-[5vw] font-bold"
+            }
           >
             <Button color="black">Узнать больше</Button>
           </div>
         </div>
       </div>
-
       <div id="tablet_carousel" className={"relative hidden sm:max-lg:block"}>
         <Swiper
         
@@ -126,8 +127,12 @@ const Carousel = () => {
           </div>
         </div>
       </div>
-
-      <div id="mobile_carousel" className={"relative sm:hidden"}>
+      <div
+        id="desktop_carousel"
+        className={
+          "relative hidden w-screen justify-center overflow-hidden lg:flex "
+        }
+      >
         <Swiper
           spaceBetween={0}
           allowTouchMove={false}
@@ -144,13 +149,13 @@ const Carousel = () => {
           navigation={false}
           modules={[Autoplay, EffectFade]}
         >
-          {carousel_items.mobile.map(({ id, name, image, priority }) => {
+          {carousel_items.desktop.map(({ id, name, image, priority }) => {
             return (
-              <SwiperSlide key={id}>
+              <SwiperSlide key={id} className={"overflow-hidden"}>
                 <Image
-                  quality={70}
+                quality={60}
                   priority={priority ? true : undefined}
-                  className={"h-auto w-screen"}
+                  className={"h-auto w-full"}
                   src={image}
                   height={1000}
                   width={1920}
@@ -160,24 +165,21 @@ const Carousel = () => {
             );
           })}
         </Swiper>
+
         <div
-          id="mobile_carousel_block"
-          className={`absolute bottom-0 z-10 h-[29%] w-screen bg-[url(/images/mobile_carousel_block.png)] 
-       bg-cover bg-no-repeat p-[10%]`}
+          id="desktop_carousel_block"
+          className={`absolute bottom-0 right-[17%] z-10 h-[37%] w-[32%] bg-[url(/images/desktop_carousel_block.png)] 
+       bg-cover bg-no-repeat p-[4%]`}
         >
           <div
-            id="mobile_carousel_text"
-            className={
-              "text-center font-archangelsk text-[9vw] leading-[9.1vw]"
-            }
+            id="desktop_carousel_text"
+            className={"font-archangelsk text-[3vw] leading-[3.1vw]"}
           >
             Доступно на всех платформах
           </div>
           <div
-            id="mobile_carousel_button"
-            className={
-              "mt-[12%] h-[40%] w-full font-roboto text-[5vw] font-bold"
-            }
+            id="desktop_carousel_button"
+            className={"mt-[5%] h-[40%] w-[55%] font-roboto font-bold"}
           >
             <Button color="black">Узнать больше</Button>
           </div>
