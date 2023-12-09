@@ -21,6 +21,7 @@ const Commercial = () => {
           <div id="image">
             {" "}
             <Image
+               quality={60}
               className={"h-auto w-full"}
               src={img_monitor}
               height={650}

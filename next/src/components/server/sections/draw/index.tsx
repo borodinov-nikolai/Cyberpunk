@@ -146,7 +146,7 @@ const Draw = () => {
       </div>
       <div
         id="draw_bottom_corner"
-        className={'w-scren h-[70px] bg-[url("/images/bottom_corner.png")]'}
+        className={'w-scren h-[70px] bg-[url("/images/bottom_corner.jpg")]'}
       ></div>
     </>
   );

@@ -7,13 +7,31 @@ import tablet_image_3 from "@/public/images/carousel_tablet_3.jpg";
 import mobile_image_1 from "@/public/images/carousel_mobile_1.jpg";
 import mobile_image_2 from "@/public/images/carousel_mobile_2.jpg";
 import mobile_image_3 from "@/public/images/carousel_mobile_3.jpg";
+import { StaticImageData } from "next/image";
 
-const carousel_items = {
-  desktop: [
+
+
+
+interface IСarousel_items {
+  desktop: CarouselIitem[],
+  tablet: CarouselIitem[],
+  mobile: CarouselIitem[]
+}
+
+type CarouselIitem= {
+  id:number,
+  name:string,
+  image: StaticImageData,
+  priority?: boolean
+}
+
+const carousel_items : IСarousel_items = {
+  desktop:  [
     {
       id: 1,
       name: "cyberpunk image_1",
       image: desktop_image_1,
+      priority: true
     },
     {
       id: 2,
@@ -32,6 +50,7 @@ const carousel_items = {
       id: 1,
       name: "cyberpunk image_1",
       image: tablet_image_1,
+      priority: true
     },
     {
       id: 2,
@@ -50,6 +69,7 @@ const carousel_items = {
       id: 1,
       name: "cyberpunk image_1",
       image: mobile_image_1,
+      priority: true
     },
     {
       id: 2,

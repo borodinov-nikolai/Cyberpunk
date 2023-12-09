@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/icons/Cyberpunk_2077_logo 1.svg";
+import logo from "@/public/icons/Cyberpunk_2077_logo 1.png";
 import socialList from "@/src/constants/social_list";
 
 const Header = () => {
@@ -13,6 +13,7 @@ const Header = () => {
     >
       <Link className={"inline-block"} href={"/"}>
         <Image
+        quality={10}
           className={"h-[74px] w-auto"}
           src={logo}
           height={74}

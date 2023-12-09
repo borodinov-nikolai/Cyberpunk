@@ -33,10 +33,12 @@ const Carousel = () => {
           navigation={false}
           modules={[Autoplay, EffectFade]}
         >
-          {carousel_items.desktop.map(({ id, name, image }) => {
+          {carousel_items.desktop.map(({ id, name, image, priority }) => {
             return (
               <SwiperSlide key={id} className={"overflow-hidden"}>
                 <Image
+                quality={60}
+                  priority={priority ? true : undefined}
                   className={"h-auto w-full"}
                   src={image}
                   height={1000}
@@ -70,6 +72,7 @@ const Carousel = () => {
 
       <div id="tablet_carousel" className={"relative hidden sm:max-lg:block"}>
         <Swiper
+        
           spaceBetween={0}
           allowTouchMove={false}
           centeredSlides={true}
@@ -85,10 +88,12 @@ const Carousel = () => {
           navigation={false}
           modules={[Autoplay, EffectFade]}
         >
-          {carousel_items.tablet.map(({ id, name, image }) => {
+          {carousel_items.tablet.map(({ id, name, image, priority }) => {
             return (
               <SwiperSlide key={id}>
                 <Image
+                  quality={60}
+                  priority={priority ? true : undefined}
                   className={"h-auto w-screen"}
                   src={image}
                   height={1000}
@@ -139,10 +144,12 @@ const Carousel = () => {
           navigation={false}
           modules={[Autoplay, EffectFade]}
         >
-          {carousel_items.mobile.map(({ id, name, image }) => {
+          {carousel_items.mobile.map(({ id, name, image, priority }) => {
             return (
               <SwiperSlide key={id}>
                 <Image
+                  quality={70}
+                  priority={priority ? true : undefined}
                   className={"h-auto w-screen"}
                   src={image}
                   height={1000}
