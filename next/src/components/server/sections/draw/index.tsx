@@ -100,28 +100,32 @@ const Draw = () => {
               type="text"
               placeholder="Твой email"
             />
-            <div id='input_file' className=" lg:flex lg:flex-col mt-[35px] flex h-[120px] items-center justify-center bg-[url(/images/screenshot_input_border.png)] bg-[length:100%_100%] bg-no-repeat font-light sm:placeholder:text-[18px]">
+            <div
+              id="input_file"
+              className=" mt-[35px] flex h-[120px] items-center justify-center bg-[url(/images/screenshot_input_border.png)] bg-[length:100%_100%] bg-no-repeat font-light sm:placeholder:text-[18px] lg:flex lg:flex-col"
+            >
               <input
                 className={"hidden"}
                 id="fileInput"
                 type="file"
                 placeholder="Прикрепить скриншот"
               />
-              <label className={"underline  cursor-pointer"} htmlFor="fileInput">
-                
+              <label
+                className={"cursor-pointer  underline"}
+                htmlFor="fileInput"
+              >
                 Прикрепите скриншот
               </label>
-              <p className={'text-xs'} >.png / .jpg / .pdf</p>
+              <p className={"text-xs"}>.png / .jpg / .pdf</p>
             </div>
             <div
               className={
-                " mt-[35px] h-[60px] w-[182px] sm:w-[192px] font-bold sm:text-[18px] "
+                " mt-[35px] h-[60px] w-[182px] font-bold sm:w-[192px] sm:text-[18px] "
               }
             >
               <Button color="yellow">Отправить</Button>
             </div>
             <div className={"mt-[14px] flex"}>
-              
               <input
                 className={"peer hidden"}
                 id="checkbox"

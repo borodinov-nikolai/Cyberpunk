@@ -12,7 +12,6 @@ const Header = () => {
       }
     >
       <Link className={"inline-block"} href={"/"}>
-        
         <Image
           className={"h-[74px] w-auto"}
           src={logo}
@@ -28,7 +27,6 @@ const Header = () => {
         {socialList.map(({ id, name, icon }) => {
           return (
             <li key={id}>
-              
               <Link href="/">
                 <Image
                   className={"h-[30px] w-auto"}
