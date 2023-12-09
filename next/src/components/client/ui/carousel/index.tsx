@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import carousel_items from "@/src/constants/carousel_list";
 import Button from "@/src/components/client/ui/button";
 
@@ -8,7 +8,28 @@ import Button from "@/src/components/client/ui/button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 
+
+
+
+
+
 const Carousel = () => {
+const [device, setDevice] = useState<string>()
+
+
+useEffect(()=> {
+
+  if(window.innerWidth < 640) {
+  setDevice('mobile')
+  } else if(window.innerWidth > 640 && window.innerWidth < 992) {
+    setDevice('tablet') 
+  } else if(window.innerWidth > 992) {
+    setDevice('desktop')
+  }
+},[])
+
+ 
+
   return (
     <div>
     
@@ -37,7 +58,7 @@ const Carousel = () => {
               <SwiperSlide key={id}>
                 <Image
                   quality={70}
-                  priority={priority && window.innerWidth  < 640 ?  true : undefined}
+                  priority={priority && device === 'mobile' ?  true : undefined}
                   className={"h-auto w-screen"}
                   src={image}
                   height={1000}
@@ -96,7 +117,7 @@ const Carousel = () => {
               <SwiperSlide key={id}>
                 <Image
                   quality={60}
-                  priority={priority &&( window.innerWidth  > 640 && window.innerWidth  < 992)? true : undefined}
+                  priority={priority && device === 'tablet' ?  true : undefined}
                   className={"h-auto w-screen"}
                   src={image}
                   height={1000}
@@ -155,7 +176,7 @@ const Carousel = () => {
               <SwiperSlide key={id} className={"overflow-hidden"}>
                 <Image
                 quality={60}
-                  priority={priority && window.innerWidth > 992 ? true : undefined}
+                  priority={priority && device === 'desktop' ? true : undefined}
                   className={"h-auto w-full"}
                   src={image}
                   height={1000}
