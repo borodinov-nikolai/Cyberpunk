@@ -31,6 +31,7 @@ const carousel_items : IСarousel_items = {
       id: 1,
       name: "cyberpunk image_1",
       image: desktop_image_1,
+      priority: true
     },
     {
       id: 2,
@@ -49,7 +50,7 @@ const carousel_items : IСarousel_items = {
       id: 1,
       name: "cyberpunk image_1",
       image: tablet_image_1,
-
+      priority: true
     },
     {
       id: 2,
