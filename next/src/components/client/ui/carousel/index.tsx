@@ -79,6 +79,64 @@ const Carousel = () => {
         </div>
       </div>
 
+
+
+      <div id="desktop_carousel"
+        className={
+          "relative hidden w-screen justify-center overflow-hidden lg:flex "
+        }
+      >
+        <Swiper
+          spaceBetween={0}
+          allowTouchMove={false}
+          centeredSlides={true}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+            waitForTransition: false,
+          }}
+          effect="fade"
+          fadeEffect={{
+            crossFade: true,
+          }}
+          navigation={false}
+          modules={[Autoplay, EffectFade]}
+        >
+          {carousel_items.desktop.map(({ id, name, image, priority }) => {
+            return (
+              <SwiperSlide key={id} className={"overflow-hidden"}>
+                <Image
+                quality={60}
+                  priority={priority ? true : undefined}
+                  className={"h-auto w-full"}
+                  src={image}
+                  height={1000}
+                  width={1920}
+                  alt={name}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+
+        <div id="desktop_carousel_block"
+          className={`absolute bottom-0 right-[17%] z-10 h-[37%] w-[32%] bg-[url(/images/desktop_carousel_block.png)] 
+       bg-cover bg-no-repeat p-[4%]`}
+        >
+          <div
+            id="desktop_carousel_text"
+            className={"font-archangelsk text-[3vw] leading-[3.1vw]"}
+          >
+            Доступно на всех платформах
+          </div>
+          <div
+            id="desktop_carousel_button"
+            className={"mt-[5%] h-[40%] w-[55%] font-roboto font-bold"}
+          >
+            <Button color="black">Узнать больше</Button>
+          </div>
+        </div>
+      </div>
    
       <div id="tablet_carousel" className={"relative hidden sm:max-lg:block"}>
         <Swiper
@@ -136,63 +194,10 @@ const Carousel = () => {
           </div>
         </div>
       </div>
-      <div id="desktop_carousel"
-        className={
-          "relative hidden w-screen justify-center overflow-hidden lg:flex "
-        }
-      >
-        <Swiper
-          spaceBetween={0}
-          allowTouchMove={false}
-          centeredSlides={true}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-            waitForTransition: false,
-          }}
-          effect="fade"
-          fadeEffect={{
-            crossFade: true,
-          }}
-          navigation={false}
-          modules={[Autoplay, EffectFade]}
-        >
-          {carousel_items.desktop.map(({ id, name, image, priority }) => {
-            return (
-              <SwiperSlide key={id} className={"overflow-hidden"}>
-                <Image
-                quality={60}
-                  priority={priority ? true : undefined}
-                  className={"h-auto w-full"}
-                  src={image}
-                  height={1000}
-                  width={1920}
-                  alt={name}
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
 
-        <div
-          id="desktop_carousel_block"
-          className={`absolute bottom-0 right-[17%] z-10 h-[37%] w-[32%] bg-[url(/images/desktop_carousel_block.png)] 
-       bg-cover bg-no-repeat p-[4%]`}
-        >
-          <div
-            id="desktop_carousel_text"
-            className={"font-archangelsk text-[3vw] leading-[3.1vw]"}
-          >
-            Доступно на всех платформах
-          </div>
-          <div
-            id="desktop_carousel_button"
-            className={"mt-[5%] h-[40%] w-[55%] font-roboto font-bold"}
-          >
-            <Button color="black">Узнать больше</Button>
-          </div>
-        </div>
-      </div>
+
+
+
     </div>
   );
 };
