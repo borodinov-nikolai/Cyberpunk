@@ -47,7 +47,7 @@ const Carousel = () => {
               <SwiperSlide key={id} className={"overflow-hidden"}>
                 <Image
                 quality={60}
-                  priority
+                  priority={priority ? true : undefined}
                   className={"h-auto w-full"}
                   src={image}
                   height={1000}
@@ -101,7 +101,7 @@ const Carousel = () => {
               <SwiperSlide key={id}>
                 <Image
                   quality={60}
-                  priority
+                  priority={priority?  true : undefined}
                   className={"h-auto w-screen"}
                   src={image}
                   height={1000}
@@ -158,7 +158,7 @@ const Carousel = () => {
               <SwiperSlide key={id}>
                 <Image
                   quality={70}
-                  priority
+                  priority={priority ?  true : undefined}
                   className={"h-auto w-screen"}
                   src={image}
                   height={1000}
