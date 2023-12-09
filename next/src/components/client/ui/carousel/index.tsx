@@ -47,7 +47,7 @@ const Carousel = () => {
               <SwiperSlide key={id} className={"overflow-hidden"}>
                 <Image
                 quality={60}
-                  priority={priority ? true : undefined}
+                  priority
                   className={"h-auto w-full"}
                   src={image}
                   height={1000}
@@ -78,6 +78,63 @@ const Carousel = () => {
         </div>
       </div>
    
+      <div id="tablet_carousel" className={"relative hidden sm:max-lg:block"}>
+        <Swiper
+        
+          spaceBetween={0}
+          allowTouchMove={false}
+          centeredSlides={true}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+            waitForTransition: false,
+          }}
+          effect="fade"
+          fadeEffect={{
+            crossFade: true,
+          }}
+          navigation={false}
+          modules={[Autoplay, EffectFade]}
+        >
+          {carousel_items.tablet.map(({ id, name, image, priority }) => {
+            return (
+              <SwiperSlide key={id}>
+                <Image
+                  quality={60}
+                  priority
+                  className={"h-auto w-screen"}
+                  src={image}
+                  height={1000}
+                  width={1920}
+                  alt={name}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+
+        <div
+          id="tablet_carousel_block"
+          className={`absolute bottom-0 right-[4%] z-10 h-[37%] w-[60%] bg-[url(/images/desktop_carousel_block.png)] 
+       bg-cover bg-no-repeat p-[6%]`}
+        >
+          <div
+            id="tablet_carousel_text"
+            className={"font-archangelsk text-[5.8vw] leading-[5.9vw]"}
+          >
+            Доступно на всех платформах
+          </div>
+          <div
+            id="tablet_carousel_button"
+            className={
+              " mt-[5%] h-[30%] w-[55%] font-roboto text-[2vw] font-bold"
+            }
+          >
+            <Button color="black">Узнать больше</Button>
+          </div>
+        </div>
+      </div>
+
 
       <div id="mobile_carousel" className={"relative sm:hidden"}>
         <Swiper
@@ -101,7 +158,7 @@ const Carousel = () => {
               <SwiperSlide key={id}>
                 <Image
                   quality={70}
-                  priority={priority ?  true : undefined}
+                  priority
                   className={"h-auto w-screen"}
                   src={image}
                   height={1000}
@@ -139,63 +196,7 @@ const Carousel = () => {
 
 
     
-      <div id="tablet_carousel" className={"relative hidden sm:max-lg:block"}>
-        <Swiper
-        
-          spaceBetween={0}
-          allowTouchMove={false}
-          centeredSlides={true}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-            waitForTransition: false,
-          }}
-          effect="fade"
-          fadeEffect={{
-            crossFade: true,
-          }}
-          navigation={false}
-          modules={[Autoplay, EffectFade]}
-        >
-          {carousel_items.tablet.map(({ id, name, image, priority }) => {
-            return (
-              <SwiperSlide key={id}>
-                <Image
-                  quality={60}
-                  priority={priority?  true : undefined}
-                  className={"h-auto w-screen"}
-                  src={image}
-                  height={1000}
-                  width={1920}
-                  alt={name}
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-
-        <div
-          id="tablet_carousel_block"
-          className={`absolute bottom-0 right-[4%] z-10 h-[37%] w-[60%] bg-[url(/images/desktop_carousel_block.png)] 
-       bg-cover bg-no-repeat p-[6%]`}
-        >
-          <div
-            id="tablet_carousel_text"
-            className={"font-archangelsk text-[5.8vw] leading-[5.9vw]"}
-          >
-            Доступно на всех платформах
-          </div>
-          <div
-            id="tablet_carousel_button"
-            className={
-              " mt-[5%] h-[30%] w-[55%] font-roboto text-[2vw] font-bold"
-            }
-          >
-            <Button color="black">Узнать больше</Button>
-          </div>
-        </div>
-      </div>
-
+  
 
 
 
