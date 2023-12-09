@@ -50,7 +50,8 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div
+      </div>
+      <div
           id="trademarks"
           className={
             " w-full bg-black px-[34px] py-[14px] text-center text-xs  leading-[14.06px] text-white"
@@ -58,7 +59,6 @@ const Footer = () => {
         >
           CD PROJEKT®, Cyberpunk®, Cyberpunk 2077®
         </div>
-      </div>
     </div>
   );
 };
