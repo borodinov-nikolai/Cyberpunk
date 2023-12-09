@@ -155,7 +155,7 @@ const Carousel = () => {
               <SwiperSlide key={id} className={"overflow-hidden"}>
                 <Image
                 quality={60}
-                  priority={priority && innerWidth > 992 ? true : undefined}
+                  priority={priority && window.innerWidth > 992 ? true : undefined}
                   className={"h-auto w-full"}
                   src={image}
                   height={1000}
