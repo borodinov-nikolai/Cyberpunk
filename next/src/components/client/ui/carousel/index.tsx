@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import carousel_items from "@/src/constants/carousel_items";
+import carousel_items from "@/src/constants/carousel_list";
 import Button from "@/src/components/client/ui/button";
 
 // Import Swiper

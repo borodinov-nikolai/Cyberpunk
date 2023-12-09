@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/icons/Cyberpunk_2077_logo 1.svg";
-import socialList from "@/src/constants/social_list_items";
+import socialList from "@/src/constants/social_list";
 
 const Header = () => {
   return (
