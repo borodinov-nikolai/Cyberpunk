@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import carousel_items from "@/src/constants/carousel_list";
 import Button from "@/src/components/client/ui/button";
 
@@ -14,27 +14,13 @@ import { Autoplay, EffectFade } from "swiper/modules";
 
 
 const Carousel = () => {
-const [device, setDevice] = useState<string>()
 
-
-useEffect(()=> {
-
-  if(window.innerWidth < 640) {
-  setDevice('mobile')
-  } else if(window.innerWidth > 640 && window.innerWidth < 992) {
-    setDevice('tablet') 
-  } else if(window.innerWidth > 992) {
-    setDevice('desktop')
-  }
-},[])
 
  
 
   return (
     <div>
     
-
-     
 
       <div id="mobile_carousel" className={"relative sm:hidden"}>
         <Swiper
@@ -58,7 +44,7 @@ useEffect(()=> {
               <SwiperSlide key={id}>
                 <Image
                   quality={70}
-                  priority={priority && device === 'mobile' ?  true : undefined}
+                  priority={priority ?  true : undefined}
                   className={"h-auto w-screen"}
                   src={image}
                   height={1000}
@@ -117,7 +103,7 @@ useEffect(()=> {
               <SwiperSlide key={id}>
                 <Image
                   quality={60}
-                  priority={priority && device === 'tablet' ?  true : undefined}
+                  priority={priority?  true : undefined}
                   className={"h-auto w-screen"}
                   src={image}
                   height={1000}
@@ -176,7 +162,7 @@ useEffect(()=> {
               <SwiperSlide key={id} className={"overflow-hidden"}>
                 <Image
                 quality={60}
-                  priority={priority && device === 'desktop' ? true : undefined}
+                  priority={priority ? true : undefined}
                   className={"h-auto w-full"}
                   src={image}
                   height={1000}
