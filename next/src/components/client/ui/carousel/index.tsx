@@ -37,7 +37,7 @@ const Carousel = () => {
               <SwiperSlide key={id}>
                 <Image
                   quality={70}
-                  priority={priority ? true : undefined}
+                  priority={priority && window.innerWidth  < 640 ?  true : undefined}
                   className={"h-auto w-screen"}
                   src={image}
                   height={1000}
@@ -71,6 +71,8 @@ const Carousel = () => {
           </div>
         </div>
       </div>
+
+   
       <div id="tablet_carousel" className={"relative hidden sm:max-lg:block"}>
         <Swiper
         
@@ -94,7 +96,7 @@ const Carousel = () => {
               <SwiperSlide key={id}>
                 <Image
                   quality={60}
-                  priority={priority ? true : undefined}
+                  priority={priority &&( window.innerWidth  > 640 && window.innerWidth  < 992)? true : undefined}
                   className={"h-auto w-screen"}
                   src={image}
                   height={1000}
@@ -127,8 +129,7 @@ const Carousel = () => {
           </div>
         </div>
       </div>
-      <div
-        id="desktop_carousel"
+      <div id="desktop_carousel"
         className={
           "relative hidden w-screen justify-center overflow-hidden lg:flex "
         }
@@ -154,7 +155,7 @@ const Carousel = () => {
               <SwiperSlide key={id} className={"overflow-hidden"}>
                 <Image
                 quality={60}
-                  priority={priority ? true : undefined}
+                  priority={priority && innerWidth > 992 ? true : undefined}
                   className={"h-auto w-full"}
                   src={image}
                   height={1000}
